@@ -45,12 +45,6 @@ class App extends Component {
     this.state = initialState;
   }
 
-  componentDidMount() {
-    fetch(REACT_APP_SMART_BRAIN_API)
-      .then(response => response.json())
-      .then(console.log);
-  }
-
   loadUser = data => {
     this.setState({
       user: {
@@ -133,7 +127,7 @@ class App extends Component {
 
   render() {
     const { isSignedIn, imageUrl, route, box } = this.state;
-    console.log(REACT_APP_SMART_BRAIN_API);
+    
     return (
       <div className="App">
         <Particles className="particles" params={particleOptions} />
