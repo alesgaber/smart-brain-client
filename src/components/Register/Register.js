@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+const { REACT_APP_SMART_BRAIN_API } = process.env;
 
 class Register extends Component {
+
+  
 
    constructor(props) {
     super(props);
@@ -24,7 +27,7 @@ class Register extends Component {
   };
 
   onRegister = () => {    
-    fetch('http://localhost:3000/register', {
+    fetch(REACT_APP_SMART_BRAIN_API + '/register', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
